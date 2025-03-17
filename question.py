@@ -18,6 +18,7 @@ answers = [
 ]
 
 correct_answers_index = [1, 2, 0, 3, 1]
+puntaje = 0 #inicializamos los puntos
 
 for _ in range(3):
     
@@ -37,6 +38,7 @@ for _ in range(3):
             sys.exit(1)
         if user_answer == correct_answers_index[question_index]:
             print("¡Correcto!")
+            puntaje += 1
             break
         #evaluamos que el numero este dentro del rango
         elif (user_answer < 0) or (user_answer > (len(answers[question_index])-1)):
@@ -45,9 +47,11 @@ for _ in range(3):
         #si esta dentro del rango, pero no es el numero se ejecuta el else
         else:
             print("Incorrecto. Intente de nuevo")
+            puntaje = puntaje - 0.5
     else:
         print("Incorrecto. La respuesta correcta es:")
         print(answers[question_index]
     [correct_answers_index[question_index]])
-    
     print()
+print(f"Usted ha obtenido un total de ",puntaje," puntos") #imprimimos el puntaje total
+    
