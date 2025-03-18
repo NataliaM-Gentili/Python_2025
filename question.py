@@ -21,7 +21,8 @@ correct_answers_index = [1, 2, 0, 3, 1]
 puntaje = 0 #inicializamos los puntos
 
 #agregamos la ayuda dada para el inciso C
-questions_to_ask = random.choices(list(zip(questions,answers, correct_answers_index)), k=3)
+#reemplazamos random.choices por random.sample para que no se elija la misma pregunta más de una vez
+questions_to_ask = random.sample(list(zip(questions,answers, correct_answers_index)), k=3)
 #k = 3 indica que se tomaran tuplas, por lo que no es necesario utilizar for in range (3)
 #se "igualan" (posicionalmente hablando) las listas, por lo que la pregunta 0 se corresponde con las respuestas en la posicion 0 y la opcion correcta de la posicion 0   
 for pregunta, respuestas, correcta in questions_to_ask:
