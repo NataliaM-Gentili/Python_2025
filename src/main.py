@@ -1,4 +1,4 @@
-from src import one_round, ranking_final
+from funciones import one_round, ranking_final
 
 rounds = [
     {

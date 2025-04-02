@@ -1,4 +1,4 @@
-from src.funciones import funciones_internas
+from funciones import funciones_internas
 def one_round (rounds, this_round, total_points):
     """Recorre cada ronda actualizando los puntos de cada jugador
     y la imprime en orden descendente acorde a los puntos totales (score)"""
