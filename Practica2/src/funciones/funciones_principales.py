@@ -1,4 +1,4 @@
-import funciones_internas
+from funciones import funciones_internas
 def initialize_data(rounds):
     """Inicializa los diccionarios
     
