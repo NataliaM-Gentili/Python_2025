@@ -42,5 +42,5 @@ this_round = functions.initialize_data(rounds)
 total_points = functions.initialize_data(rounds)
 total = functions.process_data(rounds, this_round, total_points)
 functions.ranking_final(total) 
-
+ 
 

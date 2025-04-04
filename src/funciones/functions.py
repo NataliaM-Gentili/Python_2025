@@ -94,7 +94,7 @@ def ranking_final (total):
     
     Returns:
         None
-    
+     
     """
     print(f"RANKING FINAL \n".center(80))
     print("Player   Kills Assists Deaths  MVPs  Points".center(80))
