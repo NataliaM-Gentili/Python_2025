@@ -1,4 +1,4 @@
-from funciones import one_round, ranking_final
+from funciones import functions
 
 rounds = [
     {
@@ -38,23 +38,9 @@ rounds = [
     }
 ]
 
-# creo los diccionarios
-# this round es utilizado para imprimir el puntaje por ronda 
-# no contempla las rondas anteriores
-this_round = {}
-for round_number, round in enumerate (rounds, start=1):
-        for round in rounds:
-            for player in round:
-                if player not in this_round:
-                    this_round[player] = {'kills': 0, 'assists': 0, 'deaths': 0, 'MVPs': 0, 'score': 0}
-# total points lleva la acumulacion de todas las rondas       
-total_points = {}
-for round in rounds:
-    for player in round:
-        if player not in total_points:
-            total_points[player] = {'kills': 0, 'assists': 0, 'deaths': 0, 'MVPs': 0, 'score': 0}
+this_round = functions.initialize_data(rounds)
+total_points = functions.initialize_data(rounds)
+total = functions.process_data(rounds, this_round, total_points)
+functions.ranking_final(total)
 
- 
-total = one_round(rounds, this_round, total_points)
-ranking_final(total)
 
