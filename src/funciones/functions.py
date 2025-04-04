@@ -102,4 +102,4 @@ def ranking_final (total):
     for player, stats in total:
         print(f"{player:<10} {stats['kills']:<6}{stats['assists']:<7}{stats['deaths']:<8}{stats['MVPs']:<6}{stats['score']:<2}".center(76))
     print("----------------------------------------------- \n".center(80))
-    print(f"{total[0][0].upper()} ES UN DESTRUCTOR!! \n".center(80))   
+    print(f"{total[0][0].upper()} ES UN DESTRUCTOR!! \n".center(80))    
