@@ -36,3 +36,24 @@ def get_score(item):
         #function
     """
     return item[1]['score']   
+
+def print_data(this, total):
+    """Imprime los puntajes obtenidos
+    
+    Args: 
+        this (list): The sorted data of the current round or "this_round"
+        total (list): The sorted total_points data
+    
+    Returns:
+        None
+    
+    """
+    print("              ESTA RONDA              |          ESTADISTICAS TOTALES \n")
+    print("Player   Kills Assists Deaths Points  |   Player   Kills Assists Deaths  MVPs  Points")
+    print("-------------------------------------------------------------------------------------")
+    i = 0
+    for i in range(len(this)):
+        act = this[i]
+        tot = total[i]
+        print(f"{act[0]:<10} {act[1]['kills']:<6}{act[1]['assists']:<7}{act[1]['deaths']:<8}{act[1]['score']:<2}{" ":<4}{"|":<3}{tot[0]:<10} {tot[1]['kills']:<6}{tot[1]['assists']:<7}{tot[1]['deaths']:<8}{tot[1]['MVPs']:<6}{tot[1]['score']:<2}")
+    print("\n")

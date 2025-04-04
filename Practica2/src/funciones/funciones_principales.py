@@ -37,14 +37,9 @@ def process_data (rounds, this_round, total_points):
 
         mvp_player = this[0][0]
         total_points[mvp_player]['MVPs'] += 1
-        i = 0
-        for i in range(len(this)):
-            act = this[i] 
-            tot = total[i]
-            print(f"{act[0]:<10} {act[1]['kills']:<6}{act[1]['assists']:<7}{act[1]['deaths']:<8}{act[1]['score']:<2}{" ":<4}{"|":<3}{tot[0]:<10} {tot[1]['kills']:<6}{tot[1]['assists']:<7}{tot[1]['deaths']:<8}{tot[1]['MVPs']:<6}{tot[1]['score']:<2}")
-            print("\n")
-            print(f"MVP DE LA RONDA: {mvp_player} \n".center(80))
-            print("----------------------------------------- \n".center(80))
+        funciones_internas.print_data(this, total)
+        print(f"MVP DE LA RONDA: {mvp_player} \n".center(80))
+        print("----------------------------------------- \n".center(80))
     return total
         
    
