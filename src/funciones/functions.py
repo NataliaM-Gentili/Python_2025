@@ -88,7 +88,7 @@ def process_data (rounds, this_round, total_points):
    
 def ranking_final (total):
     """Imprime las estadísticas totales
-    
+      
     Args: 
         total (list): cointains the sorted total points ranking
     

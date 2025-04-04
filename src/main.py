@@ -29,7 +29,7 @@ rounds = [
     'Frost': {'kills': 8, 'assists': 1, 'deaths': True},
     'Reaper': {'kills': 1, 'assists': 1, 'deaths': False}
     },
-    {
+    {  
     'Shadow': {'kills': 1, 'assists': 2, 'deaths': True},
     'Blaze': {'kills': 0, 'assists': 1, 'deaths': False},
     'Viper': {'kills': 2, 'assists': 0, 'deaths': True},
